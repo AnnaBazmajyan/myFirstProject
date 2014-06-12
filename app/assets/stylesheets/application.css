@@ -1,0 +1,88 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or vendor/assets/stylesheets of plugins, if any, can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any styles
+ * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
+ * file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+body { padding-top: 60px; }
+footer { margin-top: 100px; }
+table, td, th { vertical-align: middle; border: none; }
+th { border-bottom: 1px solid #DDD; }
+
+/*navigation*/
+.nav li:hover, .nav li:active{background-image: linear-gradient(to bottom, #ebebeb 0%, #f3f3f3 100%);
+background-repeat: repeat-x;
+box-shadow: inset 0 3px 9px rgba(0, 0, 0, 0.075);}
+
+/*google maps */
+#one_marker {
+width: 100%;
+height: 100%;
+position: absolute!important;
+/* overflow: hidden; */
+-webkit-transform: translateZ(0px);
+background-color: rgb(229, 227, 223);
+left: 0;
+top: 0;
+}
+#one_marker img { 
+  max-width: none;}
+
+#one_marker label { 
+  width: auto; display:inline;} 
+
+#map_container{ margin: 0 10px; 
+z-index: 2000000;
+top: 40px;
+/* overflow: hidden; */
+width: 400px;
+height: 280px;
+position: fixed;
+left: 64%;}
+
+/*slides*/
+#sidebar_container {width: 1170px; height: 500px; 
+	overflow: scroll; /* Allows the slides to be viewed using scrollbar if Javascript isn't available */ 
+	position: relative; z-index: 5;}
+
+/*div#slides { max-height: 500px; overflow: scroll; padding: 15px 0 0 12px;}*/
+
+.wrap {width: 100%; margin:auto;
+	position: relative;}
+
+div#sidebar_container ul#nav {
+	display: none;
+	list-style: none;
+	margin: 0 auto;
+	position: relative; top: 210px; z-index: 15;}
+	
+div#sidebar_container ul#nav li#prev {
+	float: left; margin: 0 0 0 40px;}
+	
+div#sidebar_container ul#nav li#next {
+	float: right; margin: 0 50px 0 0;}
+		
+div#sidebar_container ul#nav li a {
+	display: block; width: 80px; height: 80px; text-indent: -9999px;}
+		
+div#sidebar_container ul#nav li#prev a {
+	background-image: url(prev.png);
+}
+	
+div#sidebar_container ul#nav li#next a {
+	background-image: url(next.png);}
+#slides li { list-style:none;}
+#slides { margin:0;}
+
+media="all"
+@media (min-width: 768px)
+
